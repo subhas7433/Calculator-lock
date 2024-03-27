@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#F3F3F3"
+    android:id="@+id/parentLayout"
+    android:orientation="vertical"
+    tools:context=".PickFileActivity">
+
+    <LinearLayout
+        android:id="@+id/loadingView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavbar">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="-80dp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/finding"
+            app:lottie_speed="1" />
+
+        <TextView
+            style="@style/TextView.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:letterSpacing="0.1"
+            android:text="File loading"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pickLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/topNavbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_nav_header_height"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/default_padding_HZ"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/title"
+                    style="@style/TextView.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All Videos"
+                    android:textColor="@color/primary_txt_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/filterItems"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="10dp"
+                    android:rotation="-90"
+                    android:background="@color/transparent"
+                    android:src="@drawable/back_ic" />
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pickFileRecycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_gallery" />
+
+        <LinearLayout
+            android:id="@+id/emptyView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topNavbar">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:background="@color/transparent"
+                android:scaleType="centerCrop"
+                app:lottie_autoPlay="true"
+                app:lottie_cacheComposition="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/finding"
+                app:lottie_speed="1" />
+
+            <TextView
+                style="@style/TextView.Light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:letterSpacing="0.1"
+                android:text="Opps! No file found"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/selectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/selectALL"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_height"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_round_btn"
+                android:letterSpacing="0.1"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:text="Select All"
+                android:textAllCaps="true"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="@dimen/btn_txt_size" />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submit"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="@dimen/btn_height"
+                android:layout_margin="5dp"
+                android:background="@drawable/custom_round_btn"
+                android:backgroundTint="@color/colorPrimary"
+                android:letterSpacing="0.1"
+                android:outlineSpotShadowColor="@color/transparent"
+                android:text="Hide"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/btn_txt_size" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

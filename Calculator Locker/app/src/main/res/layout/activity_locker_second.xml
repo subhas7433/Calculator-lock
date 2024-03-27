@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_background"
+    xmlns:maxads="http://schemas.applovin.com/android/1.0"
+    android:orientation="vertical"
+    tools:context=".LockerSecondActivity">
+
+    <LinearLayout
+        android:id="@+id/topNavbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_header_height"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/default_padding_HZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backBTN"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:layout_height="@dimen/navbar_icon_size"
+            android:background="@color/transparent"
+            android:onClick="onBackPressed"
+            android:src="@drawable/back_ic" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Photos"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="20sp" />
+        <LinearLayout
+            android:id="@+id/selectionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <CheckBox
+                android:id="@+id/selectAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                style="@style/TextView.Bold"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:text="Select All"/>
+
+            <TextView
+                android:id="@+id/cancel"
+                style="@style/TextView.Bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:text="Cancel"
+                android:textStyle="bold"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/filterItems"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:visibility="gone"
+            android:layout_height="@dimen/navbar_icon_size"
+            android:background="@color/transparent"
+            android:src="@drawable/menu_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemRecycleView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavbar">
+        <com.applovin.mediation.ads.MaxAdView
+            android:id="@+id/bn_appLovin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="visible"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            maxads:adUnitId="7b44f339fd89a53e" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/galleryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_gallery" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavbar">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="-80dp"
+            android:background="@color/transparent"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_cacheComposition="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/finding"
+            app:lottie_speed="1" />
+
+        <TextView
+            style="@style/TextView.Light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
+            android:letterSpacing="0.1"
+            android:text="Opps! No file found"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/addNewMedia"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="15dp"
+            android:background="@drawable/custom_float_btn_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/plus_ic"
+            app:tint="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/default_padding_HZ"
+            android:layout_marginBottom="15dp"
+            android:visibility="gone"
+            android:background="@drawable/custom_round_btn"
+            android:backgroundTint="@color/colorPrimary_light">
+
+            <TextView
+                android:id="@+id/unhide"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/hide_ic"
+                android:drawablePadding="2dp"
+                android:drawableTint="@color/primary_txt_color"
+                android:gravity="center_horizontal"
+                android:paddingVertical="@dimen/options_padding_VA"
+                android:text="Unhide"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/delete"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/options_padding_VA"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/delete_icon"
+                android:drawableTint="@color/primary_txt_color"
+                android:drawablePadding="2dp"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="13sp" />
+            <TextView
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/options_padding_VA"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="Share"
+                android:gravity="center_horizontal"
+                android:drawableTop="@drawable/share_icon"
+                android:drawableTint="@color/primary_txt_color"
+                android:drawablePadding="2dp"
+                android:textColor="@color/primary_txt_color"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

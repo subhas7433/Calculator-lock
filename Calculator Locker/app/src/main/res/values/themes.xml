@@ -1,0 +1,43 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CalculatorLocker" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/toolbar_white</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="android:buttonTint">@color/checkbox_btn</item>
+
+        <!-- Customize FONT -->
+        <item name="android:textViewStyle">@style/CustomTextView</item>
+
+        <item name="bottomSheetDialogTheme">@style/bottomDialog</item>
+        <item name="dialogTheme">@style/Dialog</item>
+    </style>
+
+    <style name="Theme.CalculatorLocker" parent="Base.Theme.CalculatorLocker" />
+    <style name="CustomTextView" parent="Widget.AppCompat.TextView">
+        <!-- Style for overall text -->
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="bottomDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:maxWidth">340dp</item>
+    </style>
+</resources>

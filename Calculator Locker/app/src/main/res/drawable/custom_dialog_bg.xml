@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Button background for pressed state -->
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="@dimen/card_radious"/>
+            <solid android:color="@color/colorPrimary_light" /> <!-- Change this color to the desired pressed color -->
+        </shape>
+    </item>
+
+    <!-- Default button background -->
+    <item>
+        <shape>
+            <corners android:radius="@dimen/card_radious"/>
+            <solid android:color="@color/white" /> <!-- Change this color to the default color -->
+        </shape>
+    </item>
+</selector>

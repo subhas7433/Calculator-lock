@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="dammy_txt">Ask questions and get answers from advanced AI. Powered by the most advanced AI technology. It is designed for seamless conversational experiences.</string>
+    <string name="confirmPassTxt">Confirm Password</string>
+    <string name="fileInfoDBName">File_info</string>
+    <string name="tableCreationSql">(_id INTEGER PRIMARY KEY autoincrement, file_original_Name text DEFAULT \'Not set\',file_Path_o text DEFAULT \'0\',file_name_d text DEFAULT \'0\',file_path_d text DEFAULT \'0\', mediaType text DEFAULT \'0\',file_Thumbnail_Path text DEFAULT \'0\')</string>
+    <string name="encryptedFolderName">.do_not_delete_affix</string>
+    <string name="databasePassWord">heloschoeurbsrl</string>
+    <string name="playstoreUrl">https://play.google.com/store/apps/details?</string>
+    <string name="privacyPolicyUrl">https://affixstudio.in/app/calculator-locker/privacy-policy.html</string>
+    <string name="playstoreAffixUrl">https://play.google.com/store/apps/dev?id=5972013630879230520</string>
+    <string name="demoPass">009988</string>
+    <string name="selectAll">Select All</string>
+    <string name="unselectALL">Unselect All</string>
+    <string name="applovinNativeADID">459f15dec9f4e39d</string>
+    <string name="appLovin_interstitial">31f54a1cd29d0482</string>
+    <string name="appLovin_banner">7b44f339fd89a53f</string>
+    <string name="no_files_found">No Files Found</string>
+</resources>

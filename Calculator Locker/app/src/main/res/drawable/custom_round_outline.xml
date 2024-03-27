@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Default button background -->
+    <item>
+        <shape>
+            <corners android:radius="@dimen/btn_radious"/>
+            <stroke android:width="2dp" android:color="@color/gray" /> <!-- Change this color to the default color -->
+        </shape>
+    </item>
+</selector>

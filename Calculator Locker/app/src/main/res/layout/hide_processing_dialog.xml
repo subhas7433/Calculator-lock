@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="15dp"
+    android:background="@drawable/custom_dialog_bg">
+
+
+    <TextView
+        style="@style/TextView.Bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hiding"
+        android:layout_marginVertical="15dp"
+        android:textColor="@color/primary_txt_color"
+        android:textSize="20sp" />
+    <TextView
+        style="@style/TextView.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="It usually takes seconds."
+        android:textColor="@color/primary_txt_color"
+        android:textSize="14sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/TextView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height"
+        android:background="@drawable/custom_round_btn"
+        android:backgroundTint="@color/colorPrimary"
+        android:letterSpacing="0.1"
+        android:layout_marginTop="20dp"
+        android:outlineSpotShadowColor="@color/transparent"
+        android:text="Cancel"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_txt_size" />
+
+</LinearLayout>

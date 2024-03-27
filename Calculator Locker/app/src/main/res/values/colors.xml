@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DC6104</color>
+    <color name="colorPrimaryDark">#AA520F</color>
+    <color name="colorOnSurface">#CACACA</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+
+    <color name="colorSecondary">#13D588</color>
+    <color name="colorSecondaryVariant">#13D588</color>
+    <color name="colorOnSecondary">#222</color>
+
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnPrimaryDark">#fff</color>
+    <color name="colorPrimaryDarkAbove">#fff</color>
+    <color name="colorPrimary_light">#FFD7B8</color>
+
+    <color name="premium_clr">#F1AF0D</color>
+    <color name="premium_bg">#FFF6E1</color>
+
+    <color name="toolbar_white">#FAFAFA</color>
+    <color name="subscription_icon">@color/colorPrimary</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="primary_txt_color">#1D1D1D</color>
+    <color name="secondary_txt_color">@color/mid_black</color>
+
+    <color name="primary_background">#F8F8F8</color>
+    <color name="secondary_background">@color/mid_black</color>
+
+    <color name="black">#FF000000</color>
+    <color name="mid_black">#272727</color>
+    <color name="dark_gray">#595959</color>
+    <color name="gray">#EAEAEA</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

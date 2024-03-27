@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_radious">100dp</dimen>
+    <dimen name="card_radious">24dp</dimen>
+    <dimen name="default_radious">10dp</dimen>
+
+    <dimen name="calculator_height_tablerow">70dp</dimen>
+    <dimen name="calculator_txt_size">23sp</dimen>
+    <dimen name="calculator_margin_HZ">7dp</dimen>
+    <dimen name="calculator_margin_VA">7dp</dimen>
+    <dimen name="default_padding_HZ">15dp</dimen>
+    <dimen name="radio_btn_padding_end">15dp</dimen>
+    <dimen name="radio_btn_margin_end">5dp</dimen>
+    <dimen name="normal_font_size">14.5sp</dimen>
+    <dimen name="gallery_item_margin">4dp</dimen>
+
+    <dimen name="top_nav_header_height">50dp</dimen>
+    <dimen name="navbar_icon_size">40dp</dimen>
+    <dimen name="btn_height">46dp</dimen>
+    <dimen name="btn_txt_size">14sp</dimen>
+    <dimen name="password_img_size">44dp</dimen>
+    <dimen name="password_img_padding">10dp</dimen>
+    <dimen name="password_margin_HZ">6dp</dimen>
+    <dimen name="setting_tools_icon">26dp</dimen>
+    <dimen name="setting_tools_icon_margin_end">10dp</dimen>
+    <dimen name="setting_tools_txt_size">15sp</dimen>
+    <dimen name="setting_margin_bottom">15dp</dimen>
+    <dimen name="options_padding_VA">8dp</dimen>
+</resources>

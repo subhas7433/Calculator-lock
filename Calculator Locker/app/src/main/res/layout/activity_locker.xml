@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:maxads="http://schemas.applovin.com/android/1.0"
+    android:background="@color/primary_background"
+    android:orientation="vertical"
+    tools:context=".LockerActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/top_nav_header_height"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="@dimen/default_padding_HZ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/TextView.Bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/primary_txt_color"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="@dimen/navbar_icon_size"
+            android:layout_height="@dimen/navbar_icon_size"
+            android:background="@color/transparent"
+            android:src="@drawable/setting_icon" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding_HZ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/TextView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/custom_round_btn"
+            android:drawableLeft="@drawable/incognito_mode"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:outlineSpotShadowColor="@color/transparent"
+            android:paddingHorizontal="@dimen/default_padding_HZ"
+            android:text="Private Browser"
+            android:textColor="@color/dark_gray"
+            android:textSize="@dimen/btn_txt_size"
+            android:visibility="gone" />
+        <com.applovin.mediation.ads.MaxAdView
+            android:id="@+id/bn_appLovin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            android:layout_marginBottom="20dp"
+            android:background="@color/white"
+            maxads:adUnitId="7b44f339fd89a53e" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:id="@+id/openPhotoScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_cardview"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:layout_weight="1"
+                    android:text="Photos"
+                    android:textColor="@color/primary_txt_color"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/image_ic" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/openVideoScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="7dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_cardview"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-3dp"
+                    android:layout_weight="1"
+                    android:text="Videos"
+                    android:textColor="@color/primary_txt_color"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/video_ic" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/ad_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/default_padding_HZ"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_round_btn"
+                android:backgroundTint="@color/radio_button_background"
+                android:button="@null"
+                android:drawableLeft="@drawable/file_ic"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/radio_button_text_color_selector"
+                android:paddingStart="@dimen/default_padding_HZ"
+                android:paddingEnd="@dimen/radio_btn_padding_end"
+                android:text="All"
+                android:textColor="@color/radio_button_text_color_selector"
+                android:textSize="@dimen/normal_font_size" />
+
+            <RadioButton
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/radio_btn_margin_end"
+                android:layout_weight="1"
+                android:background="@drawable/custom_round_btn"
+                android:backgroundTint="@color/radio_button_background"
+                android:button="@null"
+                android:drawableLeft="@drawable/image_ic"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/radio_button_text_color_selector"
+                android:paddingStart="@dimen/default_padding_HZ"
+                android:paddingEnd="@dimen/radio_btn_padding_end"
+                android:text="Photo"
+                android:textColor="@color/radio_button_text_color_selector"
+                android:textSize="@dimen/normal_font_size" />
+
+            <RadioButton
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/custom_round_btn"
+                android:backgroundTint="@color/radio_button_background"
+                android:button="@null"
+                android:drawableLeft="@drawable/video_ic"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/radio_button_text_color_selector"
+                android:paddingStart="@dimen/default_padding_HZ"
+                android:paddingEnd="@dimen/radio_btn_padding_end"
+                android:text="Video"
+                android:textColor="@color/radio_button_text_color_selector"
+                android:textSize="@dimen/normal_font_size" />
+
+
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" >
+        <ImageButton
+            android:id="@+id/addVideo"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/custom_float_btn_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/video_ic"
+            android:visibility="gone"
+            android:translationZ="1dp"
+            android:layout_margin="7dp"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/addImage"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:background="@drawable/custom_float_btn_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:src="@drawable/image_ic"
+            android:translationZ="1dp"
+            android:visibility="gone"
+            android:layout_margin="7dp"
+            app:tint="@color/white" />
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/addNewMedia"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:src="@drawable/plus_ic"
+            android:layout_margin="7dp"
+            android:background="@drawable/custom_round_btn"
+            android:backgroundTint="@color/colorPrimary"
+            app:tint="@color/white"
+            android:translationZ="1dp"
+            />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
