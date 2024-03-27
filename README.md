@@ -24,7 +24,11 @@ This code exemplifies the use of AES encryption for securely storing media files
 
 ## Screenshots
 
-![Secure Media Locker](path/to/screenshot.png)
+<p float="left">
+  <img src="create_pass.png" width="200"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="main.png" width="200" /> 
+</p>
 
 *Include additional screenshots as necessary*
 `
