@@ -30,13 +30,6 @@ This code exemplifies the use of AES encryption for securely storing media files
   <img src="main.png" width="200" /> 
 </p>
 
-*Include additional screenshots as necessary*
 `
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit pull requests, report bugs, or suggest new features.
-
 ## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE) file for details.
+This project is published exclusively for demonstration purposes and is not authorized for modification or distribution.
